@@ -3,4 +3,5 @@ class Video < ApplicationRecord
   friendly_id :publicid, use: :slugged
   
   belongs_to :channel
+  validates :title, presence: true
 end
