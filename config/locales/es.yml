@@ -1,0 +1,62 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "no coincide con la contraseña"
+            current_password:
+              blank: "no puede estar en blanco"
+              invalid: "no es válida"
+            password:
+              too_short: "debe tener como mínimo 8 carácteres"
+              blank: "no puede estar en blanco"
+            email:
+              taken: "ya está registrado"
+              invalid: "no es válida"
+              blank: "obligatorio"
+            first_name:
+              blank: "obligatorio"
+            last_name:
+              blank: "obligatorio"
+            nif:
+              blank: "obligatorio"
+    attributes:
+      user:
+        first_name: 'Nombre'
+        last_name: 'Apellidos'
+        email: 'Correo electrónico'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de contraseña'
+        current_password: 'Contraseña actual'
+        remember_me: "Recuérdame"
+        role: "Tipología de usuario"
+  devise:
+    registrations:
+      new:
+        crear_nou_compte: "Crear una nueva cuenta"
+        crear_compte: "Crear cuenta"
+        si_compte: "Si ya tienes cuenta puedes"
+        iniciar_sessio: "iniciar sesión"
+    sessions:
+      new:
+        iniciar_sessio: "Iniciar sesión"
+        recorda: "Recuérdame"
+        contrasenya_oblidada: "¿Has olvidado la contraseña?"
+        crear_compte: "Crear una cuenta nueva"
+  layouts:
+    desktop_navigation:
+      home: "Inicio"
+      videos: "Vídeos"
+      articles: "Artículos"
+      courses: "Cursos"
+      directs: "Directos"
+      communities: "Comunidades"
+      library: "Biblioteca"
+      subscriptions: "Suscripciones"
+  home:
+    top_bar:
+      login: "Iniciar sesión"
+      profile: "Configuración de la cuenta"
+      sign_out: "Cerrar la sesión"

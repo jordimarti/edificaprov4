@@ -27,7 +27,7 @@ class User < ApplicationRecord
   end
 
   def create_affiliation(account_id, self_id)
-    affiliation = Affiliation.new
+    affiliation = AccountAffiliation.new
     affiliation.account_id = account_id
     affiliation.user_id = self_id
     affiliation.role = "user"

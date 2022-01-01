@@ -1,0 +1,62 @@
+ca:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "no coincideix amb la contrasenya"
+            current_password:
+              blank: "no pot estar en blanc"
+              invalid: "no és vàlida"
+            password:
+              too_short: "ha de tenir com a mínim 8 caràcters"
+              blank: "no pot estar en blanc"
+            email:
+              taken: "ja està registrat"
+              invalid: "adreça no vàlida"
+              blank: "obligatori"
+            first_name:
+              blank: "obligatori"
+            last_name:
+              blank: "obligatori"
+            nif:
+              blank: "obligatori"
+    attributes:
+      user:
+        first_name: 'Nom'
+        last_name: 'Cognoms'
+        email: 'Correu electrònic'
+        password: 'Contrasenya'
+        password_confirmation: 'Confirmació de contrasenya'
+        current_password: 'Contrasenya actual'
+        remember_me: "Recorda'm"
+        role: "Tipus d'usuari"
+  devise:
+    registrations:
+      new:
+        crear_nou_compte: "Crear un nou compte"
+        crear_compte: "Crea compte"
+        si_compte: "Si ja tens un compte pots"
+        iniciar_sessio: "iniciar sessió"
+    sessions:
+      new:
+        iniciar_sessio: "Iniciar sessió"
+        recorda: "Recorda'm"
+        contrasenya_oblidada: "Has oblidat la contrasenya?"
+        crear_compte: "Crear un compte nou"
+  layouts:
+    desktop_navigation:
+      home: "Inici"
+      videos: "Vídeos"
+      articles: "Articles"
+      courses: "Cursos"
+      directs: "Directes"
+      communities: "Comunitats"
+      library: "Biblioteca"
+      subscriptions: "Subscripcions"
+  home:
+    top_bar:
+      login: "Iniciar sessió"
+      profile: "Configuració del compte"
+      sign_out: "Tancar la sessió"
