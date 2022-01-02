@@ -58,6 +58,10 @@ ca:
     top_bar:
       sign_out: "Tancar sessió"
       change_account: "Canviar de compte"
+      new_video: "Nou vídeo"
+      new_article: "Nou article"
+      new_course: "Nou curs"
+      new_community: "Nova comunitat"
   home:
     top_bar:
       login: "Iniciar sessió"

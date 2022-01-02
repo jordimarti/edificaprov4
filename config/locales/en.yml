@@ -12,6 +12,10 @@ en:
     top_bar:
       sign_out: "Sign out"
       change_account: "Change account"
+      new_video: "New video"
+      new_article: "New article"
+      new_course: "New course"
+      new_community: "New community"
   home:
     top_bar:
       login: "Log in"

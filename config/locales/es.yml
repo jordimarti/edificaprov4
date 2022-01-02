@@ -58,6 +58,10 @@ es:
     top_bar:
       sign_out: "Cerrar sesión"
       change_account: "Cambiar de cuenta"
+      new_video: "Nuevo vídeo"
+      new_article: "Nuevo artículo"
+      new_course: "Nuevo curso"
+      new_community: "Nueva comunidad"
   home:
     top_bar:
       login: "Iniciar sesión"
