@@ -55,6 +55,9 @@ ca:
       communities: "Comunitats"
       library: "Biblioteca"
       subscriptions: "Subscripcions"
+    top_bar:
+      sign_out: "Tancar sessió"
+      change_account: "Canviar de compte"
   home:
     top_bar:
       login: "Iniciar sessió"

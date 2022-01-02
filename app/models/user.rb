@@ -20,18 +20,17 @@ class User < ApplicationRecord
   end
 
   def create_user_account
-    account = Account.new
-    account.name = self.name
-    account.save
+    account = Account.create! name: self.name
     create_affiliation(account.id, self.id)
   end
 
   def create_affiliation(account_id, self_id)
-    affiliation = AccountAffiliation.new
-    affiliation.account_id = account_id
-    affiliation.user_id = self_id
-    affiliation.role = "user"
-    affiliation.save
+    AccountAffiliation.create! account_id: account_id, user_id: self_id, role: "user"
+    create_channel(account_id)
+  end
+
+  def create_channel(account_id)
+    Channel.create! account_id: account_id, name: self.name, privacy: 'public', publicid: SecureRandom.base58(10)
   end
 
   def assign_locale(&action)

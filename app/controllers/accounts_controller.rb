@@ -20,13 +20,19 @@ class AccountsController < ApplicationController
     end
   end
 
+  def select
+    @accounts = current_user.accounts
+  end
+
   def switch
-    if(params.has_key?(:id))
-      @account = Account.find(params[:id])
+    if(params.has_key?(:channel_id))
+      @channel = Channel.find(params[:channel_id])
+      @account = Account.find(@channel.account_id)
     else
       @account = current_user.account.find_by(role: 'user')
     end
     session[:account_id] = @account.id
+    session[:channel_id] = @channel.id
     @current_affiliation = AccountAffiliation.find_by(user_id: current_user.id, account_id: @account.id)
     current_user.role = @current_affiliation.role
     current_user.save

@@ -5,6 +5,6 @@ Account.create! name: 'Martinelli'
 Account.create! name: 'HoitiAccount'
 AccountAffiliation.create! user_id: 1, account_id: 4, role: 'admin'
 AccountAffiliation.create! user_id: 2, account_id: 5, role: 'viewer'
-Channel.create! account_id: 4, name: 'Martinelli live', privacy: 'public'
-Channel.create! account_id: 4, name: 'Martinelli team space', privacy: 'private'
-Channel.create! account_id: 5, name: 'Hoiti world', privacy: 'public'
+Channel.create! account_id: 4, name: 'Martinelli live', privacy: 'public', publicid: SecureRandom.base58(10)
+Channel.create! account_id: 4, name: 'Martinelli team space', privacy: 'private', publicid: SecureRandom.base58(10)
+Channel.create! account_id: 5, name: 'Hoiti world', privacy: 'public', publicid: SecureRandom.base58(10)

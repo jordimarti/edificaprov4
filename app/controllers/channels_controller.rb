@@ -60,11 +60,11 @@ class ChannelsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_channel
-      @channel = Channel.find(params[:id])
+      @channel = Channel.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def channel_params
-      params.require(:channel).permit(:account_id, :name, :privacy, :subscribers, :main_community)
+      params.require(:channel).permit(:account_id, :name, :privacy, :subscribers, :main_community, :publicid)
     end
 end

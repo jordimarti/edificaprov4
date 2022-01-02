@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'accounts/switch'
+  get 'accounts/select'
   resources :library_folders
   resources :communities
   resources :courses

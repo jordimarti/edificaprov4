@@ -55,6 +55,9 @@ es:
       communities: "Comunidades"
       library: "Biblioteca"
       subscriptions: "Suscripciones"
+    top_bar:
+      sign_out: "Cerrar sesión"
+      change_account: "Cambiar de cuenta"
   home:
     top_bar:
       login: "Iniciar sesión"

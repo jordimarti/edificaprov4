@@ -9,6 +9,9 @@ en:
       communities: "Communities"
       library: "Library"
       subscriptions: "Subscriptions"
+    top_bar:
+      sign_out: "Sign out"
+      change_account: "Change account"
   home:
     top_bar:
       login: "Log in"

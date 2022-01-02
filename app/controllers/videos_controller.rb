@@ -1,11 +1,8 @@
 class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
-  after_action :verify_authorized
 
-  # GET /videos or /videos.json
   def index
-    @videos = Video.all
-    authorize @videos
+    @videos = Video.where(visible: true)
   end
 
   # GET /videos/1 or /videos/1.json
