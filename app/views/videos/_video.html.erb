@@ -7,9 +7,27 @@
   <p>
     <strong>Video:</strong>
     <div class="max-w-2xl h-auto">
-      <video-js controls preload class="vjs-theme-forest" id="player-id" data-setup='{"liveui": true,"fluid": true}' >
-        <source src="https://stream.mux.com/<%= @video.playback_id %>.m3u8" type="application/x-mpegURL">
-      </video-js>
+      <video 
+        id="my-player" 
+        class="video-js vjs-16-9" 
+        controls 
+        preload="auto" 
+        width="100%"
+        data-setup='{
+          "timelineHoverPreviews": true,
+          "plugins": {
+            "mux": {
+              "debug": true,
+              "data":{
+                "env_key": "afsac6gl89ec1fi293tmnmd5o",
+                "video_title": "Example Title"
+              }
+            }
+          }
+        }'
+      >
+        <source src="f00lkMcBO01tt52I86AZI01eKw5RPU7BWwfbTVYev6k7Bg" type="video/mux" />
+      </video>  
     </div>
   </p>
 
