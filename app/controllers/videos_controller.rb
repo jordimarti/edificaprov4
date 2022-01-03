@@ -24,6 +24,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       if @video.save
+        create_mux_video(@video)
         format.html { redirect_to video_url(@video), notice: "Video was successfully created." }
         format.json { render :show, status: :created, location: @video }
       else
@@ -31,6 +32,20 @@ class VideosController < ApplicationController
         format.json { render json: @video.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def create_mux_video(video)
+    assets_api = MuxRuby::AssetsApi.new
+    create_asset = MuxRuby::CreateAssetRequest.new
+    create_asset.input = url_for(video.file)
+    puts "MUX URL: #{create_asset.input}"
+    create_asset.playback_policy = [MuxRuby::PlaybackPolicy::PUBLIC]
+    create_response = assets_api.create_asset(create_asset)  
+    puts "MUX response playback id: #{create_response.data.playback_ids.first.id}"
+    video.playback_id = create_response.data.playback_ids.first.id
+    video.policy = create_response.data.playback_ids.first.policy
+    video.mux_asset_id = create_response.data.id
+    video.save
   end
 
   # PATCH/PUT /videos/1 or /videos/1.json
@@ -60,11 +75,11 @@ class VideosController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_video
       @video = Video.find(params[:id])
-      authorize @video
+      #authorize @video
     end
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:channel_id, :title, :score, :visible, :publicid, :playback_id, :policy, :mux_asset_id, :status, :max_stored_resolution, :max_stored_frame_rate, :duration, :aspect_ratio)
+      params.require(:video).permit(:channel_id, :title, :score, :visible, :publicid, :playback_id, :policy, :mux_asset_id, :status, :max_stored_resolution, :max_stored_frame_rate, :duration, :aspect_ratio, :file)
     end
 end

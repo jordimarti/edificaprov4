@@ -1,68 +1,18 @@
 <div id="<%= dom_id video %>">
   <p class="my-5">
-    <strong class="block font-medium mb-1">Channel:</strong>
-    <%= video.channel_id %>
-  </p>
-
-  <p class="my-5">
     <strong class="block font-medium mb-1">Title:</strong>
     <%= video.title %>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Score:</strong>
-    <%= video.score %>
+  <p>
+    <strong>Video:</strong>
+    <div class="max-w-2xl h-auto">
+      <video-js controls preload class="vjs-theme-forest" id="player-id" data-setup='{"liveui": true,"fluid": true}' >
+        <source src="https://stream.mux.com/<%= @video.playback_id %>.m3u8" type="application/x-mpegURL">
+      </video-js>
+    </div>
   </p>
 
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Visible:</strong>
-    <%= video.visible %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Publicid:</strong>
-    <%= video.publicid %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Playback:</strong>
-    <%= video.playback_id %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Policy:</strong>
-    <%= video.policy %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Mux asset:</strong>
-    <%= video.mux_asset_id %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Status:</strong>
-    <%= video.status %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Max stored resolution:</strong>
-    <%= video.max_stored_resolution %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Max stored frame rate:</strong>
-    <%= video.max_stored_frame_rate %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Duration:</strong>
-    <%= video.duration %>
-  </p>
-
-  <p class="my-5">
-    <strong class="block font-medium mb-1">Aspect ratio:</strong>
-    <%= video.aspect_ratio %>
-  </p>
 
   <% if action_name != "show" %>
     <%= link_to "Show this video", video, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>

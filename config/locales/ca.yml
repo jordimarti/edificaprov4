@@ -56,14 +56,28 @@ ca:
       library: "Biblioteca"
       subscriptions: "Subscripcions"
     top_bar:
+      login: "Iniciar sessió"
       sign_out: "Tancar sessió"
       change_account: "Canviar de compte"
       new_video: "Nou vídeo"
       new_article: "Nou article"
       new_course: "Nou curs"
       new_community: "Nova comunitat"
+    dashboard:
+      dashboard: "Panell de control"
+      home: "Inici"
+      videos: "Vídeos"
+      articles: "Articles"
+      courses: "Cursos"
+      communities: "Comunitats"
+      billing: "Facturació"
+      channel: "Canal"
   home:
     top_bar:
       login: "Iniciar sessió"
       profile: "Configuració del compte"
       sign_out: "Tancar la sessió"
+  dashboard:
+    videos:
+      videos_title: "Vídeos"
+      upload_first_video: "Puja el teu primer vídeo"

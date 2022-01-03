@@ -10,14 +10,28 @@ en:
       library: "Library"
       subscriptions: "Subscriptions"
     top_bar:
+      login: "Login"
       sign_out: "Sign out"
       change_account: "Change account"
       new_video: "New video"
       new_article: "New article"
       new_course: "New course"
       new_community: "New community"
+    dashboard:
+      dashboard: "Dashboard"
+      home: "Home"
+      videos: "Videos"
+      articles: "Articles"
+      courses: "Courses"
+      communities: "Communities"
+      billing: "Billing"
+      channel: "Channel"
   home:
     top_bar:
       login: "Log in"
       profile: "Account configuration"
       sign_out: "Sign out"
+  dashboard:
+    videos:
+      videos_title: "Videos"
+      upload_first_video: "Upload your first video"

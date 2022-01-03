@@ -56,14 +56,28 @@ es:
       library: "Biblioteca"
       subscriptions: "Suscripciones"
     top_bar:
+      login: "Iniciar sesión"
       sign_out: "Cerrar sesión"
       change_account: "Cambiar de cuenta"
       new_video: "Nuevo vídeo"
       new_article: "Nuevo artículo"
       new_course: "Nuevo curso"
       new_community: "Nueva comunidad"
+    dashboard:
+      dashboard: "Panel de control"
+      home: "Inicio"
+      videos: "Vídeos"
+      articles: "Artículos"
+      courses: "Cursos"
+      communities: "Comunidades"
+      billing: "Facturación"
+      channel: "Canal"
   home:
     top_bar:
       login: "Iniciar sesión"
       profile: "Configuración de la cuenta"
       sign_out: "Cerrar la sesión"
+  dashboard:
+    videos:
+      videos_title: "Vídeos"
+      upload_first_video: "Sube tu primer vídeo"

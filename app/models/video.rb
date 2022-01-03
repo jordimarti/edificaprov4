@@ -4,4 +4,5 @@ class Video < ApplicationRecord
   
   belongs_to :channel
   validates :title, presence: true
+  has_one_attached :file
 end
