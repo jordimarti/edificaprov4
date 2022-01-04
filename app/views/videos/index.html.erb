@@ -9,6 +9,8 @@
   </div>
 
   <div id="videos" class="min-w-full">
-    <%= render @videos %>
+    <% @videos.each do |video| %>
+      <%= link_to video.title, video %>
+    <% end %>
   </div>
 </div>

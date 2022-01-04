@@ -2,7 +2,7 @@ class VideosController < ApplicationController
   before_action :set_video, only: %i[ show edit update destroy ]
 
   def index
-    @videos = Video.where(visible: true)
+    @videos = Video.all
   end
 
   # GET /videos/1 or /videos/1.json
@@ -74,7 +74,7 @@ class VideosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_video
-      @video = Video.find(params[:id])
+      @video = Video.friendly.find(params[:id])
       #authorize @video
     end
 

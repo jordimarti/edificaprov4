@@ -7,3 +7,4 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "tailwindcss-stimulus-components", to: "https://ga.jspm.io/npm:tailwindcss-stimulus-components@3.0.1/dist/tailwindcss-stimulus-components.modern.js"
 pin "@mux/videojs-kit", to: "https://ga.jspm.io/npm:@mux/videojs-kit@0.7.0/dist/index.js"
+pin "@rails/activestorage", to: "activestorage.esm.js"
