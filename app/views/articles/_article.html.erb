@@ -9,9 +9,18 @@
     <%= article.title %>
   </p>
 
+  <p>
+    Posted:
+    <%= time_tag article.created_at, "data-local": "time-ago" %>
+  </p>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Score:</strong>
     <%= article.score %>
+  </p>
+
+  <p class="my-5">
+    <%= article.content %>
   </p>
 
   <% if action_name != "show" %>

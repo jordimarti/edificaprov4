@@ -1,7 +1,17 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New article</h1>
-
-  <%= render "form", article: @article %>
-
-  <%= link_to 'Back to articles', articles_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+<%= render ("layouts/dashboard") %>  
+    <main class="flex-1">
+      <div class="py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          <h1 class="text-2xl font-semibold text-gray-900">New video</h1>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+          
+          <div class="py-4">
+            <%= render "form", article: @article %>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+  </div>
 </div>

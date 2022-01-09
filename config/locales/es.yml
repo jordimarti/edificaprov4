@@ -81,3 +81,23 @@ es:
     videos:
       videos_title: "Vídeos"
       upload_first_video: "Sube tu primer vídeo"
+  time:
+    am: "am"
+    pm: "pm"
+    singular: "a {time}"
+    singularAn: "an {time}"
+    elapsed: "{time} ago"
+    second: "second"
+    seconds: "seconds"
+    minute: "minute"
+    minutes: "minutes"
+    hour: "hour"
+    hours: "hours"
+    formats:
+      default: "%l:%M%P"
+      long: "%l:%M%P"
+  datetime:
+    at: "{date} at {time}"
+    formats:
+      default: "%B %e, %Y at %l:%M%P %Z"
+      long: "%B %e, %Y at %l:%M%P %Z"
